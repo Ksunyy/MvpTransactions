@@ -11,6 +11,13 @@ public class UsersController: ControllerBase
         this.userService = userService;
     }
  
+    [HttpGet("{login}")]
+    public IActionResult GetUserByLogin(string login)
+    {
+
+        return Ok(userService.getUserByLogin(login));
+    }
+
     [HttpGet]
     public IActionResult GetListOfUsers()
     {
@@ -18,6 +25,11 @@ public class UsersController: ControllerBase
         return Ok(userService.getUsers());
     }
 
+    [HttpDelete]
+    public IActionResult DeleteUserByLogin(string login)
+    {
+        return Ok(userService.DeleteUserByLogin(login));
+    }
 
     [HttpPost]
     public IActionResult CreateUser(CreateUserRequest createUserRequest)

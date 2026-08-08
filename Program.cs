@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args); // возвращает стр
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddScoped<UserService>();
+builder.Services.AddSingleton<UserService>();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build(); // возвращает приложение

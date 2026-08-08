@@ -28,3 +28,4 @@ D:\SharpProjects\MvpTransactions\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger
 D:\SharpProjects\MvpTransactions\obj\Debug\net9.0\MvpTransactions.csproj.AssemblyReference.cache
 D:\SharpProjects\MvpTransactions\obj\Debug\net9.0\MvpTransactions.MvcApplicationPartsAssemblyInfo.cs
 D:\SharpProjects\MvpTransactions\obj\Debug\net9.0\MvpTrans.2215C1F6.Up2Date
+D:\SharpProjects\MvpTransactions\obj\Debug\net9.0\MvpTransactions.sourcelink.json

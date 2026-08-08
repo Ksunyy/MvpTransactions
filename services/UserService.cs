@@ -1,6 +1,19 @@
 public class UserService
 {
-    private readonly List<User> users = new();
+    private static readonly List<User> users = new();
+
+    private static User findUserByLogin(String login)
+    {
+        foreach (User item in users)
+        {
+            if (item.login.Equals(login))
+            {
+                return  item;
+            }
+        }
+        return null;
+        
+    }
 
     public CreateUserResponse createUser(CreateUserRequest createUserRequest)
     {
@@ -19,4 +32,23 @@ public class UserService
     {
         return users;
     }
+
+    public List<User> getUserByLogin(string login)
+    {
+        List<User> result = new();
+        if (findUserByLogin(login) != null)
+        {
+           result.Add(findUserByLogin(login));
+            
+        }
+        return result;
+    }
+
+    public int DeleteUserByLogin(String login)
+    {
+       User deleteUser =  findUserByLogin(login);
+       users.Remove(deleteUser);
+       return 0;
+    }
+
 }
